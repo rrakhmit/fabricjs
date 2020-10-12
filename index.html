@@ -69,10 +69,14 @@
 
         function updateColor(picker){
             var activeObject = canvas.getActiveObject();
-            activeObject.set({
-                fill: picker.toRGBString()
-            });
-            canvas.renderAll();
+            if(activeObject){
+
+            console.log(activeObject)
+                activeObject.set({
+                    fill: picker.toRGBString()
+                });
+                canvas.renderAll();
+            }
         }
     </script>
 
